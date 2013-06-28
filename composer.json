@@ -1,0 +1,16 @@
+{
+    "name": "mzw/library",
+    "description": "A library for MZW business logic and building blocks",
+    "authors": [
+        {
+            "name": "Johnny Green",
+            "email": "jgreen@mzwallace.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "*"
+    },
+    "autoload": {
+        "psr-0": {"MZW\\": "src/"}
+    }
+}

@@ -7,7 +7,7 @@
     "email": "jgreen@mzwallace.com"
   }],
   "require": {
-    "illuminate/database": "4.0"
+    "illuminate/database": "4.1.*"
   },
   "autoload": {
     "psr-0": {"MZW\\": "src/"}

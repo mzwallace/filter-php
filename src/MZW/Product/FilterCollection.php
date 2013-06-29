@@ -1,6 +1,6 @@
 <?php namespace MZW\Product;
 
-class FilterCollection {
+class FilterCollection extends Illuminate\Support\Collection {
 
   public function __construct()
   {

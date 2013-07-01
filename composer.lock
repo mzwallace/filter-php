@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "e3a4af360eaef6f74afce1dc1d2091a5",
+    "hash": "6208ac490bbd925096ee126a9ac144cc",
     "packages": [
         {
             "name": "illuminate/container",
@@ -206,46 +206,6 @@
             "time": "2013-06-25 17:18:51"
         },
         {
-            "name": "jaz303/phake",
-            "version": "v0.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jaz303/phake.git",
-                "reference": "v0.5.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jaz303/phake/zipball/v0.5.0",
-                "reference": "v0.5.0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "bin": [
-                "bin/phake"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jason Frame",
-                    "email": "jason@onehackoranother.com"
-                }
-            ],
-            "description": "A wee clone of Ruby's rake for PHP 5.3. Uses closures for ultimate coolness.",
-            "homepage": "http://github.com/jaz303/phake",
-            "keywords": [
-                "Tasks",
-                "automation",
-                "cli"
-            ],
-            "time": "2013-05-27 18:36:49"
-        },
-        {
             "name": "nesbot/carbon",
             "version": "1.2.0",
             "source": {
@@ -348,6 +308,46 @@
                 "markdown"
             ],
             "time": "2012-07-15 16:31:27"
+        },
+        {
+            "name": "jaz303/phake",
+            "version": "v0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jaz303/phake.git",
+                "reference": "v0.5.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jaz303/phake/zipball/v0.5.0",
+                "reference": "v0.5.0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "bin": [
+                "bin/phake"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jason Frame",
+                    "email": "jason@onehackoranother.com"
+                }
+            ],
+            "description": "A wee clone of Ruby's rake for PHP 5.3. Uses closures for ultimate coolness.",
+            "homepage": "http://github.com/jaz303/phake",
+            "keywords": [
+                "Tasks",
+                "automation",
+                "cli"
+            ],
+            "time": "2013-05-27 18:36:49"
         },
         {
             "name": "mockery/mockery",

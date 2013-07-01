@@ -12,7 +12,6 @@ $iterator = Finder::create()
 // generate documentation for all v1.0.* tags, the 1.0 branch, and the master one
 $versions = GitVersionCollection::create($dir)
             ->addFromTags('v1.0.*')
-            ->add('1.0', '1.0 branch')
             ->add('master', 'master branch');
 
 return new Sami($iterator, array(

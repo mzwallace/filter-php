@@ -9,4 +9,7 @@ group('docs', function()
   });
 });
 
-task('default', 'docs:build');
+/*task('default', function()
+{
+  echo `phake -T`;
+});*/

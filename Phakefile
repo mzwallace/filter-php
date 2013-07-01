@@ -5,11 +5,26 @@ group('docs', function()
   desc('Build the docs using Sami');
   task('build', function()
   {
-    echo "Building the docs, dood!\n";
+    echo "Phake: Building documentation.\n";
+    echo `php vendor/sami/sami/sami.php update docs/config.php`;
+  });
+
+  desc('Serve the documentation');
+  task('serve', function ()
+  {
+    echo "Phake: Serving documentation at 0.0.0.0:8888.\n";
+    echo `php -S 0.0.0.0:8888 -t docs/`;
   });
 });
 
-/*task('default', function()
+group('test', function()
 {
-  echo `phake -T`;
-});*/
+  desc('Run all tests');
+  task('all', function()
+  {
+    echo "Phake: Running all tests.\n";
+    echo `phpunit tests/`;
+  };
+});
+
+task('default', 'test:all');

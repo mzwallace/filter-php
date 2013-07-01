@@ -6,7 +6,7 @@ A shared PHP Library that contains our domain / business logic
 To include this package via composer in other projects
 add the following to the composer.json file:
 
-# Using it in a composer install
+## Using it in a composer install
 ```
 $ touch composer.json
 $ more composer.json
@@ -25,16 +25,16 @@ $ more composer.json
 $ composer install
 ```
 
-#Development
+## Development
 
-## Install phake globally
+### Install phake globally
 ```
 $ cd vendor/jaz303/phake
 $ ./build.php
 $ cp phake /usr/local/bin/
 ```
 
-## Usage
+### Usage
 ```
 $ phake -T
 

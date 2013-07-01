@@ -7,7 +7,7 @@ use Symfony\Component\Finder\Finder;
 $iterator = Finder::create()
             ->files()
             ->name('*.php')
-            ->in($dir = __DIR__.'../src');
+            ->in($dir = __DIR__.'/../src');
 
 // generate documentation for all v1.0.* tags, the 1.0 branch, and the master one
 $versions = GitVersionCollection::create($dir)

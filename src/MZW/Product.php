@@ -2,7 +2,7 @@
 
 class Product {
 
-  public function __construct()
+  public function __construct($args = null)
   {
 
   }

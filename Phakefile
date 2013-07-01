@@ -13,7 +13,8 @@ group('docs', function()
   task('serve', function ()
   {
     echo "Phake: Serving documentation at 0.0.0.0:8888.\n";
-    echo `php -S 0.0.0.0:8888 -t docs/`;
+    echo "Phake: Press ctrl-c to Exit.\n";
+    echo `php -S 0.0.0.0:8888 -t docs/ & open http://0.0.0.0:8888/master/index.html`;
   });
 });
 
@@ -24,7 +25,7 @@ group('test', function()
   {
     echo "Phake: Running all tests.\n";
     echo `phpunit tests/`;
-  };
+  });
 });
 
 task('default', 'test:all');

@@ -20,3 +20,13 @@ add the following to the composer.json file:
   }
 }
 ```
+
+```
+$ phake -T
+
+#!/usr/bin/env php
+(in /Users/jgreen/Sites/mzwallace/mzwallace.com/library)
+docs:build    Build the docs using Sami
+docs:serve    Serve the documentation
+test:all      Run all tests
+```

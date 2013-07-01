@@ -6,8 +6,10 @@ A shared PHP Library that contains our domain / business logic
 To include this package via composer in other projects
 add the following to the composer.json file:
 
+# Using it in a composer install
 ```
-// composer.json
+$ touch composer.json
+$ more composer.json
 {
   "repositories": [
       {
@@ -19,8 +21,20 @@ add the following to the composer.json file:
       "mzwallace/library": "*"
   }
 }
+
+$ composer install
 ```
 
+#Development
+
+## Install phake globally
+```
+$ cd vendor/jaz303/phake
+$ ./build.php
+$ cp phake /usr/local/bin/
+```
+
+## Usage
 ```
 $ phake -T
 

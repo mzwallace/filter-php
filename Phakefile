@@ -30,7 +30,7 @@ group('test', function()
     writeln();
     writeln(purple('Running all tests.'));
     writeln();
-    writeln(`phpunit tests/`);
+    writeln(`phpunit`);
   });
 });
 

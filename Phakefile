@@ -1,30 +1,30 @@
 <?php
 
-group('docs', function()
+group(cyan('docs'), function()
 {
   desc('Build the docs using Sami');
-  task('build', function()
+  task(red('build'), function()
   {
-    echo "Phake: Building documentation.\n";
-    echo `php vendor/sami/sami/sami.php update docs/config.php`;
+    writeln(purple('Phake:').' Building documentation.');
+    writeln(`php vendor/sami/sami/sami.php update docs/config.php`);
   });
 
   desc('Serve the documentation');
-  task('serve', function ()
+  task(red('serve'), function ()
   {
-    echo "Phake: Serving documentation at 0.0.0.0:8888.\n";
-    echo "Phake: Press ctrl-c to Exit.\n";
-    echo `php -S 0.0.0.0:8888 -t docs/ & open http://0.0.0.0:8888/master/index.html`;
+    writeln(purple('Phake:').' Serving documentation at 0.0.0.0:8888.');
+    writeln(purple('Phake:').' Press ctrl-c to Exit.');
+    writeln(`php -S 0.0.0.0:8888 -t docs/ & open http://0.0.0.0:8888/master/index.html`);
   });
 });
 
-group('test', function()
+group(cyan('test'), function()
 {
   desc('Run all tests');
-  task('all', function()
+  task(red('all'), function()
   {
-    echo "Phake: Running all tests.\n";
-    echo `phpunit tests/`;
+    writeln(purple('Phake:').' Running all tests.');
+    writeln(`phpunit tests/`);
   });
 });
 

@@ -19,8 +19,5 @@
   "autoload": {
     "psr-0": {"MZW\\": "src/"}
   },
-  "minimum-stability": "dev",
-  "config": {
-    "bin-dir": "/usr/local/bin/"
-  }
+  "minimum-stability": "dev"
 }

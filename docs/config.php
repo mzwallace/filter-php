@@ -10,12 +10,12 @@ $iterator = Finder::create()
             ->in($dir = __DIR__.'/../src');
 
 // generate documentation for all v1.0.* tags, the 1.0 branch, and the master one
-$versions = GitVersionCollection::create($dir)
+/*$versions = GitVersionCollection::create($dir)
             ->addFromTags('v1.0.*')
-            ->add('master', 'master branch');
+            ->add('master', 'master branch');*/
 
 return new Sami($iterator, array(
-  'versions'  => $versions,
+  /*'versions'  => $versions,*/
   'title'     => 'MZ Wallace, Inc. API',
   'build_dir' => __DIR__.'/%version%',
   'cache_dir' => __DIR__.'/cache/%version%',

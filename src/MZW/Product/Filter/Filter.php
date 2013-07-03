@@ -7,7 +7,7 @@
  *   {{/options}}
  * {{/filters}}
  */
-class Filter
+class Filter implements FilterIterface
 {
   public $name;
   public $options;

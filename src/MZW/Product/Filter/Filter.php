@@ -19,7 +19,7 @@ class Filter
   }
 }
 
-/**/
+/*
 // app/start/bindings.php
 App::bind('filter', function($app)
 {

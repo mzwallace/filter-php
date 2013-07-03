@@ -23,7 +23,7 @@ class __TwigTemplate_3160d207a710a3841fab1cb17cc60dd7 extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_48a8fc1cba7dff71370d9a7bc703b3448f7cec53"] = $this->env->loadTemplate("macros.twig");
+        $context["__internal_0bc4916f1840cf3f88f84e5656354d546eb08adf"] = $this->env->loadTemplate("macros.twig");
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
 
@@ -62,7 +62,7 @@ class __TwigTemplate_3160d207a710a3841fab1cb17cc60dd7 extends Twig_Template
             echo "            <tr>
                 <td>";
             // line 17
-            echo $context["__internal_48a8fc1cba7dff71370d9a7bc703b3448f7cec53"]->getnamespace_link((isset($context["namespace"]) ? $context["namespace"] : $this->getContext($context, "namespace")));
+            echo $context["__internal_0bc4916f1840cf3f88f84e5656354d546eb08adf"]->getnamespace_link((isset($context["namespace"]) ? $context["namespace"] : $this->getContext($context, "namespace")));
             echo "</td>
             </tr>
         ";

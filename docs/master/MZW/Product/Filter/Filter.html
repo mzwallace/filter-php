@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>MZW\Product\Filter\Collection | MZ Wallace, Inc. API</title>
+        <title>MZW\Product\Filter\Filter | MZ Wallace, Inc. API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,13 +19,39 @@
         <div id="title">MZ Wallace, Inc. API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../MZW/Product/Filter.html">MZW\Product\Filter</a>\Collection</h1>
+    <h1><a href="../../../MZW/Product/Filter.html">MZW\Product\Filter</a>\Filter</h1>
     </div>
         <div class="content">
-                <p>class    <strong>Collection</strong>        extends <abbr title="Illuminate\Support\Collection">Collection</abbr></p>
+                <p>class    <strong>Filter</strong></p>
 
+            <div class="description">
+            <p>{{#filters}}   {{#options}}     <input type="checkbox" name="{{ name }}" value="{{ value }}" />   {{/options}} {{/filters}}</p>
+            <p>
+</p>
+        </div>
     
     
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_name">
+                                                            
+                </td>
+                <td>$name</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                                            
+                </td>
+                <td>$options</td>
+                <td class="last">
+</td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -35,7 +61,7 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>(array $filters = array())
+                    <a href="#method___construct">__construct</a>($name, $options = array())
                     <p>
 </p>
                 </td>
@@ -47,9 +73,9 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 5</div>
+        <div class="location">at line 15</div>
         <code>            public            
-    <strong>__construct</strong>(array $filters = array())</code>
+    <strong>__construct</strong>($name, $options = array())</code>
     </h3>
     <div class="details">
         <p>
@@ -61,8 +87,14 @@
 
                     <table>
                     <tr>
-                <td>array</td>
-                <td>$filters</td>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$options</td>
                 <td>
 </td>
             </tr>

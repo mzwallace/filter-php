@@ -16,7 +16,7 @@ class __TwigTemplate_cc16deef9578395ca01d93ea3f71020d extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $context["__internal_26627449857bf803c998bc5baa5f970c66d6921a"] = $this->env->loadTemplate("macros.twig");
+        $context["__internal_d740ed17a75bb3d687a9035550ad6367e1e02cb2"] = $this->env->loadTemplate("macros.twig");
         // line 4
         echo "var search_data = {
     'index': {
@@ -74,7 +74,7 @@ class __TwigTemplate_cc16deef9578395ca01d93ea3f71020d extends Twig_Template
                 echo twig_jsonencode_filter($this->env->getExtension('sami')->pathForMethod($context, $this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), 1, array(), "array")));
                 echo ",";
                 // line 21
-                echo twig_jsonencode_filter($context["__internal_26627449857bf803c998bc5baa5f970c66d6921a"]->getmethod_parameters_signature($this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), 1, array(), "array")));
+                echo twig_jsonencode_filter($context["__internal_d740ed17a75bb3d687a9035550ad6367e1e02cb2"]->getmethod_parameters_signature($this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), 1, array(), "array")));
                 echo ",";
                 // line 22
                 echo twig_jsonencode_filter($this->env->getExtension('sami')->getSnippet($this->getAttribute($this->getAttribute((isset($context["item"]) ? $context["item"] : $this->getContext($context, "item")), 1, array(), "array"), "shortdesc")));

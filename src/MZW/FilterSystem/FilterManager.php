@@ -51,6 +51,6 @@ class FilterManager
   public function getOutput()
   {
     $this->output->load($this->rules);
-    return $this->output;
+    return $this->output->getOutput();
   }
 }

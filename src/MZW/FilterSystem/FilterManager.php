@@ -37,9 +37,15 @@ class FilterManager
    * @param mixed $rules
    * @return void
    */
-  public function processRules($input, $rules)
+  public function processRules($input, $filters)
   {
-    return array_intersect($this->input->toArray(), $this->filters->toArray());
+    $input = $input->toArray();
+    $filters = $filters->collapse()->toArray();
+
+    return array_uintersect($input, $filters, function($val1, $val2)
+    {
+      return strcmp($val1, $val2);
+    });
   }
 
   /**
@@ -50,7 +56,8 @@ class FilterManager
    */
   public function getOutput()
   {
-    $this->output->load($this->rules);
+    $rules = $this->processRules($this->input, $this->filters);
+    $this->output->load($rules);
     return $this->output->getOutput();
   }
 }

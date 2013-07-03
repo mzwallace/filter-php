@@ -6,6 +6,6 @@ abstract class FilterOutput implements FilterOutputInterface
 
   public function load($rules)
   {
-    $this->$rules = $rules;
+    $this->rules = $rules;
   }
 }

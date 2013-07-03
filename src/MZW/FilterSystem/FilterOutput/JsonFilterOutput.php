@@ -1,8 +1,8 @@
-<?php namespace MZW\FilterSystem\FilterInput;
+<?php namespace MZW\FilterSystem\FilterOutput;
 
 use \MZW\FilterSystem\FilterOutput;
 
-class JsonFilterInput extends FilterOutput
+class JsonFilterOutput extends FilterOutput
 {
   public function getOutput()
   {

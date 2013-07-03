@@ -12,6 +12,6 @@ class SimpleFilter extends Filter
 
   public function toArray()
   {
-    return $this->options;
+    return [$this->name => $this->options];
   }
 }

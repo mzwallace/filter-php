@@ -1,10 +1,9 @@
-<?php namespace MZW\Product\Filter;
+<?php namespace MZW\FilterSystem\Filter;
 
-class Filter implements FilterIterface
+use \MZW\FilterSystem\Filter;
+
+class SimpleFilter extends Filter
 {
-  public $name;
-  public $options;
-
   public function __construct($name, $options = array())
   {
     $this->name = $name;

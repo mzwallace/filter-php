@@ -1,4 +1,4 @@
-<?php namespace MZW\Product\Filter;
+<?php namespace MZW\FilterSystem;
 
 class FilterTest extends \PHPUnit_Framework_TestCase {
 

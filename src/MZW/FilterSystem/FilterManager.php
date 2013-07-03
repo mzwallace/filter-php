@@ -50,6 +50,7 @@ class FilterManager
    */
   public function getOutput()
   {
-    return $this->output->load($this->rules);
+    $this->output->load($this->rules);
+    return $this->output;
   }
 }

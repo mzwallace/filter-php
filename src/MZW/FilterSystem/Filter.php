@@ -1,7 +1,14 @@
 <?php namespace MZW\FilterSystem;
 
-abstract class Filter implements FilterInterface
+use Illuminate\Support\Contracts\ArrayableInterface;
+
+abstract class Filter implements FilterInterface, ArrayableInterface
 {
   public $name;
   public $options;
+
+  public function toArray()
+  {
+    throw new \Exception('toArray has not be implemented.');
+  }
 }

@@ -1,6 +1,8 @@
 <?php namespace MZW\FilterSystem;
 
-abstract class FilterInput implements FilterInputInterface
+use Illuminate\Support\Contracts\ArrayableInterface;
+
+abstract class FilterInput implements FilterInputInterface, ArrayableInterface
 {
   public $input;
 

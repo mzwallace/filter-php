@@ -9,4 +9,6 @@ class SimpleFilter extends Filter
     $this->name = $name;
     $this->options = $options;
   }
+
+  public function toArray() {}
 }

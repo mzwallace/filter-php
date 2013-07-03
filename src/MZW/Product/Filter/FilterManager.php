@@ -1,9 +1,13 @@
 <?php namespace MZW\Product\Filter;
 
-class FilterSystem
+class FilterManager
 {
-  public function __construct()
-  {
+  public $filters;
 
+  public function __construct(FilterRepository $filters = null)
+  {
+    $this->filters = $filters;
   }
+
+
 }

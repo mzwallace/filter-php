@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="robots" content="index, follow, all" />
-        <title>MZW\FilterSystem\Filter\SimpleFilter | MZ Wallace, Inc. API</title>
+        <title>MZW\FilterSystem\FilterInput\JsonFilterInput | MZ Wallace, Inc. API</title>
                     <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
                             </head>
         <body id="class">
@@ -19,10 +19,10 @@
         <div id="title">MZ Wallace, Inc. API</div>
 
             <div class="type">Class</div>
-    <h1><a href="../../../MZW/FilterSystem/Filter.html">MZW\FilterSystem\Filter</a>\SimpleFilter</h1>
+    <h1><a href="../../../MZW/FilterSystem/FilterInput.html">MZW\FilterSystem\FilterInput</a>\JsonFilterInput</h1>
     </div>
         <div class="content">
-                <p>class    <strong>SimpleFilter</strong>        extends <a href="../../../MZW/FilterSystem/Filter.html"><abbr title="MZW\FilterSystem\Filter">Filter</abbr></a></p>
+                <p>class    <strong>JsonFilterInput</strong>        extends <a href="../../../MZW/FilterSystem/FilterOutput.html"><abbr title="MZW\FilterSystem\FilterOutput">FilterOutput</abbr></a></p>
 
     
     
@@ -30,18 +30,10 @@
 
             <table>
                     <tr>
-                <td class="type" id="property_name">
+                <td class="type" id="property_rules">
                                                             
                 </td>
-                <td>$name</td>
-                <td class="last">
-</td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_options">
-                                                            
-                </td>
-                <td>$options</td>
+                <td>$rules</td>
                 <td class="last">
 </td>
             </tr>
@@ -56,18 +48,18 @@
                     
                 </td>
                 <td class="last">
-                    <a href="#method_toArray">toArray</a>()
+                    <a href="#method_load">load</a>($rules)
                     <p>
 </p>
                 </td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../MZW/FilterSystem/FilterOutput.html#method_load"><abbr title="MZW\FilterSystem\FilterOutput">FilterOutput</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type">
                     
                 </td>
                 <td class="last">
-                    <a href="#method___construct">__construct</a>($name, array $options = array())
+                    <a href="#method_getOutput">getOutput</a>()
                     <p>
 </p>
                 </td>
@@ -78,27 +70,10 @@
 
         <h2>Details</h2>
 
-                        <h3 id="method_toArray">
-        <div class="location">at line 13</div>
+                        <h3 id="method_load">
+        <div class="location">in <a href="../../../MZW/FilterSystem/FilterOutput.html#method_load"><abbr title="MZW\FilterSystem\FilterOutput">FilterOutput</abbr></a> at line 7</div>
         <code>            public            
-    <strong>toArray</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>
-</p>
-        <p>
-</p>
-        <div class="tags">
-            
-            
-            
-                    </div>
-    </div>
-
-                <h3 id="method___construct">
-        <div class="location">at line 7</div>
-        <code>            public            
-    <strong>__construct</strong>($name, array $options = array())</code>
+    <strong>load</strong>($rules)</code>
     </h3>
     <div class="details">
         <p>
@@ -111,18 +86,29 @@
                     <table>
                     <tr>
                 <td></td>
-                <td>$name</td>
-                <td>
-</td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$options</td>
+                <td>$rules</td>
                 <td>
 </td>
             </tr>
             </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOutput">
+        <div class="location">at line 7</div>
+        <code>            public            
+    <strong>getOutput</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>
+</p>
+        <p>
+</p>
+        <div class="tags">
             
             
             

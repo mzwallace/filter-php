@@ -5,6 +5,7 @@ var tree = [["MZW",,"",
                 [        ]],["SimpleFilter","MZW\/FilterSystem\/Filter\/SimpleFilter.html"," < Filter",
                 [        ]]        ]],["FilterInput","MZW\/FilterSystem\/FilterInput.html","",
                 [["ArrayFilterInput","MZW\/FilterSystem\/FilterInput\/ArrayFilterInput.html"," < FilterInput",
+                [        ]],["JsonFilterInput","MZW\/FilterSystem\/FilterInput\/JsonFilterInput.html"," < FilterOutput",
                 [        ]]        ]],["Filter","MZW\/FilterSystem\/Filter.html","",
                 [        ]],["FilterInput","MZW\/FilterSystem\/FilterInput.html","",
                 [        ]],["FilterInputInterface","MZW\/FilterSystem\/FilterInputInterface.html","",
@@ -13,9 +14,5 @@ var tree = [["MZW",,"",
                 [        ]],["FilterOutput","MZW\/FilterSystem\/FilterOutput.html","",
                 [        ]],["FilterOutputInterface","MZW\/FilterSystem\/FilterOutputInterface.html","",
                 [        ]],["FilterRepository","MZW\/FilterSystem\/FilterRepository.html"," < Collection",
-                [        ]]        ]],["Product",,"",
-                [["Filter","MZW\/Product\/Filter.html","",
-                [["Collection","MZW\/Product\/Filter\/Collection.html"," < Collection",
-                [        ]],["Filter","MZW\/Product\/Filter\/Filter.html","",
-                [        ]]        ]]        ]]        ]]        ]
+                [        ]]        ]]        ]]        ]
 

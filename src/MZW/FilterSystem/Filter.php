@@ -1,11 +1,20 @@
 <?php namespace MZW\FilterSystem;
 
-use Illuminate\Support\Contracts\ArrayableInterface;
+use \Illuminate\Support\Collection;
 
-abstract class Filter implements FilterInterface, ArrayableInterface
+abstract class Filter extends Collection implements FilterInterface
 {
   public $name;
-  public $options;
+
+  public function getName()
+  {
+    return $this->name;
+  }
+
+  public function hasOption($option)
+  {
+    return in_array($option, $this->items);
+  }
 
   public function toArray()
   {

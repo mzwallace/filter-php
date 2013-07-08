@@ -2,5 +2,5 @@
 
 interface FilterOutputInterface
 {
-  public function load($rules);
+  public function loadRules($rules);
 }

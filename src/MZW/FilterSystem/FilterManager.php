@@ -7,8 +7,16 @@ class FilterManager
 {
   public $input;
   public $filters;
-  public $rules;
   public $output;
+
+
+  /**
+   * The selected rule set.
+   *
+   * @var mixed
+   * @access public
+   */
+  public $rules;
 
   /**
    * __construct function.
@@ -42,10 +50,25 @@ class FilterManager
     $input = $input->toArray();
     $filters = $filters->collapse()->toArray();
 
-    return array_uintersect($input, $filters, function($val1, $val2)
+    $this->rules = new FilterRepository;
+
+    foreach ($input as $name => $options)
     {
-      return strcmp($val1, $val2);
-    });
+      if ($filter = $this->filters->getFilterWithName($name))
+      {
+        $rule = new Filter\SimpleFilter($name);
+
+        foreach ($options as $option)
+        {
+          if ($filter->hasOption($option))
+          {
+            $rule[] = $option;
+          }
+        }
+
+        $this->rules[] = $rule;
+      }
+    }
   }
 
   /**
@@ -56,8 +79,8 @@ class FilterManager
    */
   public function getOutput()
   {
-    $rules = $this->processRules($this->input, $this->filters);
-    $this->output->load($rules);
+    $this->processRules($this->input, $this->filters);
+    $this->output->loadRules($this->rules);
     return $this->output->getOutput();
   }
 }

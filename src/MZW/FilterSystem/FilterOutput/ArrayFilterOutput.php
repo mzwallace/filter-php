@@ -2,10 +2,10 @@
 
 use \MZW\FilterSystem\FilterOutput;
 
-class JsonFilterOutput extends FilterOutput
+class ArrayFilterOutput extends FilterOutput
 {
   public function getOutput()
   {
-    return json_encode($this->rules->toArray());
+    return $this->rules->toArray();
   }
 }

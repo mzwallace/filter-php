@@ -4,7 +4,7 @@ abstract class FilterOutput implements FilterOutputInterface
 {
   public $rules;
 
-  public function load($rules)
+  public function loadRules($rules)
   {
     $this->rules = $rules;
   }

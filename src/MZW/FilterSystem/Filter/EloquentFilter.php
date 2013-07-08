@@ -1,6 +1,6 @@
 <?php namespace MZW\FilterSystem\Filter;
 
-use \MZW\Product\FilterSystem\Filter;
+use \MZW\FilterSystem\Filter;
 
 /**
  * EloquentFilter class.
@@ -10,14 +10,19 @@ use \MZW\Product\FilterSystem\Filter;
 class EloquentFilter extends Filter
 {
   /**
-   * The name of the model to filter.
+   * The class name of the model
    */
   public $model = "";
 
   /**
-   * The name of the column to filter.
+   * The model instance
    */
-  public $column = "";
+  public $instance = "";
+
+  /**
+   * The name of the model attribute to filter.
+   */
+  public $attribute = "";
 
   /**
    * A list of options to ignore when autocalculating.
@@ -32,7 +37,6 @@ class EloquentFilter extends Filter
    */
   public $only = array();
 
-
   /**
    * __construct function.
    *
@@ -42,11 +46,34 @@ class EloquentFilter extends Filter
    * @param mixed $column
    * @return void
    */
-  public function __construct($name, $model, $column)
+  public function __construct($name, $args = [])
   {
-    $this->name   = $name;
-    $this->model  = $model;
-    $this->column = $column;
+    $this->name = $name;
+
+    if ( ! array_key_exists('model', $args) or ! array_key_exists('attribute', $args))
+    {
+      throw new \Exception('Missing required arguments.');
+    }
+
+    $this->model     = $args['model'];
+    $this->attribute = $args['attribute'];
+
+    if (array_key_exists('only', $args) and array_key_exists('ignore', $args))
+    {
+      throw new \Exception('Please choose either only or ignore, not both.');
+    }
+
+    if (array_key_exists('only', $args))
+    {
+      $this->only = $args['only'];
+    }
+
+    if (array_key_exists('ignore', $args))
+    {
+      $this->ignore = $args['ignore'];
+    }
+
+    $this->retrieveOptions();
   }
 
 
@@ -58,6 +85,38 @@ class EloquentFilter extends Filter
    */
   public function retrieveOptions()
   {
+    $model = $this->model;
+    $this->instance = new $model;
+    $instance = $this->instance;
+    $options = $instance->distinct()->lists($this->attribute);
 
+    if (is_array($this->only) and count($this->only))
+    {
+      foreach ($options as $key => $option)
+      {
+        if ( ! in_array($option, $this->only))
+        {
+          unset($options[$key]);
+        }
+      }
+    }
+
+    if (is_array($this->ignore) and count($this->ignore))
+    {
+      foreach ($this->ignore as $ignored_option)
+      {
+        if (($key = array_search($ignored_option, $options)) !== false)
+        {
+          unset($options[$key]);
+        }
+      }
+    }
+
+    $this->items = $options;
+  }
+
+  public function toArray()
+  {
+    return ['name' => $this->name, 'options' => $this->items];
   }
 }

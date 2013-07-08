@@ -4,12 +4,14 @@ class FilterManagerTest extends \PHPUnit_Framework_TestCase
 {
   public function setUp()
   {
-    global $seeds;
-    $this->manager = $seeds['FilterManager'];
+    global $fixtures;
+    $this->manager = $fixtures['FilterManager'];
   }
 
   public function testOutput()
   {
-    $this->assertEquals('{"test":["Black"]}', $this->manager->getOutput());
+    $this->assertEquals(
+      '[{"name":"Johnny","options":["Black"]},{"name":"David","options":["Pink"]},{"name":"Shape","options":["Jane","Bea"]}]'
+    , $this->manager->getOutput());
   }
 }

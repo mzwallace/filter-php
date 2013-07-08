@@ -1,8 +1,6 @@
-<?php namespace MZW\FilterSystem\FilterOutput;
+<?php namespace MZW\Filter\Output;
 
-use \MZW\FilterSystem\FilterOutput;
-
-class ArrayFilterOutput extends FilterOutput
+class ArrayOutput extends AbstractOutput
 {
   public function getOutput()
   {

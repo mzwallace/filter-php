@@ -51,20 +51,19 @@
 </td>
             </tr>
                     <tr>
-                <td class="type" id="property_rules">
-                                                            
-                </td>
-                <td>$rules</td>
-                <td class="last">
-</td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_output">
                                                             
                 </td>
                 <td>$output</td>
                 <td class="last">
 </td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rules">
+                                                            mixed
+                </td>
+                <td>$rules</td>
+                <td class="last">The selected rule set.</td>
             </tr>
             </table>
 
@@ -87,7 +86,7 @@
                     void
                 </td>
                 <td class="last">
-                    <a href="#method_processRules">processRules</a>(mixed $input, mixed $rules)
+                    <a href="#method_processRules">processRules</a>($input, $filters)
                     <p>processRules function.</p>
                 </td>
                 <td></td>
@@ -108,7 +107,7 @@
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 22</div>
+        <div class="location">at line 29</div>
         <code>            public            void
     <strong>__construct</strong>(<a href="../../MZW/FilterSystem/FilterInputInterface.html"><abbr title="MZW\FilterSystem\FilterInputInterface">FilterInputInterface</abbr></a> $input, <a href="../../MZW/FilterSystem/FilterRepository.html"><abbr title="MZW\FilterSystem\FilterRepository">FilterRepository</abbr></a> $filters, <a href="../../MZW/FilterSystem/FilterOutputInterface.html"><abbr title="MZW\FilterSystem\FilterOutputInterface">FilterOutputInterface</abbr></a> $output)</code>
     </h3>
@@ -157,9 +156,9 @@
     </div>
 
                 <h3 id="method_processRules">
-        <div class="location">at line 40</div>
+        <div class="location">at line 47</div>
         <code>            public            void
-    <strong>processRules</strong>(mixed $input, mixed $rules)</code>
+    <strong>processRules</strong>($input, $filters)</code>
     </h3>
     <div class="details">
         <p>processRules function.</p>
@@ -170,14 +169,14 @@
 
                     <table>
                     <tr>
-                <td>mixed</td>
+                <td></td>
                 <td>$input</td>
                 <td>
 </td>
             </tr>
                     <tr>
-                <td>mixed</td>
-                <td>$rules</td>
+                <td></td>
+                <td>$filters</td>
                 <td>
 </td>
             </tr>
@@ -200,7 +199,7 @@
     </div>
 
                 <h3 id="method_getOutput">
-        <div class="location">at line 51</div>
+        <div class="location">at line 79</div>
         <code>            public            void
     <strong>getOutput</strong>()</code>
     </h3>

@@ -9,7 +9,6 @@ class FilterManager
   public $filters;
   public $output;
 
-
   /**
    * The selected rule set.
    *

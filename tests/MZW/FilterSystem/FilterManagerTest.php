@@ -11,7 +11,7 @@ class FilterManagerTest extends \PHPUnit_Framework_TestCase
   public function testOutput()
   {
     $this->assertEquals(
-      '[{"name":"Johnny","options":["Black"]},{"name":"David","options":["Pink"]},{"name":"Shape","options":["Jane","Bea"]}]'
+      '[{"name":"Johnny","options":["Black"]},{"name":"David","options":["Pink"]},{"name":"Shape","options":["Jane"]}]'
     , $this->manager->getOutput());
   }
 }

@@ -18,14 +18,14 @@ $fixtures = [
     new ArrayFilterInput([
       'Johnny' => ['Black', 'Yellow'],
       'David' => ['Pink', 'Magenta'],
-      'Shape' => ['Jane', 'Baby Jane', 'Bea']
+      'Shape' => ['Jane', 'Baby Jane']
     ]),
 
     new FilterRepository([
       new SimpleFilter('Johnny', ['Black', 'Green', 'Blue']),
       new SimpleFilter('David', ['Pink', 'Purple', 'Red']),
       new EloquentFilter('Shape', [
-        'model'     => '\Product',
+        'model'     => 'Product',
         'attribute' => 'shape',
         'ignore'    => ['Baby Jane']
       ])

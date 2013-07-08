@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Database\Capsule\Manager as Capsule;
+/*use Illuminate\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
 
@@ -17,6 +17,21 @@ $capsule->addConnection(array(
 
 $capsule->bootEloquent();
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Database\Eloquent\Model as Eloquent;*/
 
-class Product extends Eloquent {}
+// USAGE: $instance->distinct()->lists($this->attribute);
+
+class Product
+{
+
+  public function distinct()
+  {
+    return $this;
+  }
+
+  public function lists($column)
+  {
+    return ['Jane', 'Baby Jane', 'Bea'];
+  }
+
+}

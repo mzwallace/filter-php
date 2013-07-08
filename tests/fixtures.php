@@ -1,21 +1,23 @@
 <?php
 
-use \MZW\FilterSystem\FilterInput\ArrayFilterInput;
-use \MZW\FilterSystem\FilterRepository;
-use \MZW\FilterSystem\Filter\SimpleFilter;
-use \MZW\FilterSystem\Filter\EloquentFilter;
-use \MZW\FilterSystem\FilterManager;
-use \MZW\FilterSystem\FilterOutput\JsonFilterOutput;
+use \MZW\Filter\Manager as FilterManager;
+
+use \MZW\Filter\Input\ArrayInput;
+use \MZW\Filter\Repository as FilterRepository;
+use \MZW\Filter\Output\JsonOutput;
+
+use \MZW\Filter\Filter\SimpleFilter;
+use \MZW\Filter\Filter\EloquentFilter;
 
 $fixtures = [
-  'FilterOutput' => new ArrayFilterInput(['test' => ['Black']]),
+  'FilterOutput' => new ArrayInput(['test' => ['Black']]),
 
   'FilterRepository' => new FilterRepository([
       new SimpleFilter('test', ['Black', 'Red', 'Navy'])
   ]),
 
   'FilterManager' => new FilterManager(
-    new ArrayFilterInput([
+    new ArrayInput([
       'Johnny' => ['Black', 'Yellow'],
       'David' => ['Pink', 'Magenta'],
       'Shape' => ['Jane', 'Baby Jane']
@@ -31,6 +33,6 @@ $fixtures = [
       ])
     ]),
 
-    new JsonFilterOutput
+    new JsonOutput
   )
 ];

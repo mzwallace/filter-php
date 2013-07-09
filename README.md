@@ -1,6 +1,4 @@
-# library
-
-A shared PHP Library that contains our domain / business logic
+# filter
 
 To include this package via composer in other projects
 add the following to the composer.json file:
@@ -13,11 +11,11 @@ $ more composer.json
   "repositories": [
       {
           "type": "vcs",
-          "url": "https://github.com/mzwallace/library"
+          "url": "https://github.com/mzwallace/filter-php"
       }
   ],
   "require": {
-      "mzwallace/library": "*"
+      "mzwallace/filter-php": "*"
   }
 }
 
@@ -37,8 +35,6 @@ $ cp phake /usr/local/bin/
 ```
 $ phake -T
 
-#!/usr/bin/env php
-(in /Users/jgreen/Sites/mzwallace/mzwallace.com/library)
 docs:build    Build the docs using Sami
 docs:serve    Serve the documentation
 test:all      Run all tests

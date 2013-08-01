@@ -1,8 +1,5 @@
 # filter
 
-To include this package via composer in other projects
-add the following to the composer.json file:
-
 ## Usage
 ```
 $filters = new MZW\Filter\Manager(

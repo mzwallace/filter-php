@@ -1,7 +1,6 @@
 {
-  "name": "mzwallace/library",
-  "description": "A shared PHP Library that contains our domain / business logic",
-  "version": "1.0.0",
+  "name": "mzwallace/filter-php",
+  "description": "A generic filtering system",
   "license": "proprietary",
   "authors": [{
     "name": "Johnny Green",

@@ -1,8 +1,6 @@
 <?php namespace MZW\Filter\Filter;
 
-use \Illuminate\Support\Collection;
-
-abstract class AbstractFilter extends Collection implements FilterInterface
+abstract class AbstractFilter implements FilterInterface
 {
   public $name;
   public $options;
@@ -14,16 +12,16 @@ abstract class AbstractFilter extends Collection implements FilterInterface
 
   public function getOptions()
   {
-    return $this->items;
+    return $this->options;
   }
 
   public function hasOption($option)
   {
-    return in_array($option, $this->items);
+    return in_array($option, $this->options);
   }
 
   public function toArray()
   {
-    return ['name' => $this->name, 'options' => $this->items];
+    return (array)$this;
   }
 }

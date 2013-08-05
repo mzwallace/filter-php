@@ -109,6 +109,6 @@ class EloquentFilter extends AbstractFilter
       }
     }
 
-    $this->items = $options;
+    $this->options = $options;
   }
 }

@@ -1,32 +1,32 @@
 <?php
 
-use \MZW\Filter\Manager as FilterManager;
+use \Mzwallace\Filter\Manager as FilterManager;
 
-use \MZW\Filter\Input\ArrayInput;
-use \MZW\Filter\Repository as FilterRepository;
-use \MZW\Filter\Output\JsonOutput;
+use \Mzwallace\Filter\Input\ArrayInput;
+use \Mzwallace\Filter\Repository as FilterRepository;
+use \Mzwallace\Filter\Output\JsonOutput;
 
-use \MZW\Filter\Filter\SimpleFilter;
-use \MZW\Filter\Filter\EloquentFilter;
+use \Mzwallace\Filter\Filter\SimpleFilter;
+use \Mzwallace\Filter\Filter\EloquentFilter;
 
 $fixtures = [
-  'FilterOutput' => new ArrayInput(['test' => ['Black']]),
+  'FilterOutput' => new ArrayInput([4 => ['Black']]),
 
   'FilterRepository' => new FilterRepository([
-      new SimpleFilter('test', ['Black', 'Red', 'Navy'])
+      new SimpleFilter(4, 'attribute', 'test', ['Black', 'Red', 'Navy'])
   ]),
 
   'FilterManager' => new FilterManager(
     new ArrayInput([
-      'Johnny' => ['Black', 'Yellow'],
-      'David' => ['Pink', 'Magenta'],
-      'Shape' => ['Jane', 'Baby Jane']
+      1 => ['Black', 'Yellow'],
+      2 => ['Pink', 'Magenta'],
+      3 => ['Jane', 'Baby Jane']
     ]),
 
     new FilterRepository([
-      new SimpleFilter('Johnny', ['Black', 'Green', 'Blue']),
-      new SimpleFilter('David', ['Pink', 'Purple', 'Red']),
-      new EloquentFilter('Shape', [
+      new SimpleFilter(1, 'attribute', 'Johnny', ['Black', 'Green', 'Blue']),
+      new SimpleFilter(2, 'attribute', 'David', ['Pink', 'Purple', 'Red']),
+      new EloquentFilter(3, 'attribute', 'Shape', [
         'model'     => 'Product',
         'attribute' => 'shape',
         'ignore'    => ['Baby Jane']

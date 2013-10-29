@@ -2,24 +2,24 @@
 
 ## Usage
 ```
-$filters = new MZW\Filter\Manager(
-  new \MZW\Filter\Input\ArrayInput([
+$filters = new Mzwallace\Filter\Manager(
+  new \Mzwallace\Filter\Input\ArrayInput([
     'Johnny' => ['Black', 'Yellow'],
     'David' => ['Pink', 'Magenta'],
     'Shape' => ['Jane', 'Baby Jane']
   ]),
 
-  new \MZW\Filter\Repository([
-    new \MZW\Filter\Filter\SimpleFilter('Johnny', ['Black', 'Green', 'Blue']),
-    new \MZW\Filter\Filter\SimpleFilter('David', ['Pink', 'Purple', 'Red']),
-    new \MZW\Filter\Filter\EloquentFilter('Shape', [
+  new \Mzwallace\Filter\Repository([
+    new \Mzwallace\Filter\Filter\SimpleFilter('Johnny', ['Black', 'Green', 'Blue']),
+    new \Mzwallace\Filter\Filter\SimpleFilter('David', ['Pink', 'Purple', 'Red']),
+    new \Mzwallace\Filter\Filter\EloquentFilter('Shape', [
       'model'     => 'Product',
       'attribute' => 'shape',
       'ignore'    => ['Baby Jane']
     ])
   ]),
 
-  new \MZW\Filter\Output\JsonOutput
+  new \Mzwallace\Filter\Output\JsonOutput
 );
 
 $filters->getOutput();

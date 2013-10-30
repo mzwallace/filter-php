@@ -127,7 +127,7 @@ class EloquentFilter extends AbstractFilter implements JsonableInterface, Arraya
     ];
   }
 
-  public function toJson()
+  public function toJson($options = null)
   {
     return json_encode($this->toArray());
   }

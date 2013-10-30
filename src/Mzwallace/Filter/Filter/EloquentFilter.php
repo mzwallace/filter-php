@@ -10,12 +10,12 @@ class EloquentFilter extends AbstractFilter
   /**
    * The model instance
    */
-  public $instance = "";
+  public $instance = null;
 
   /**
-   * The class name of the model
+   * The class name or instance of the model
    */
-  public $model = "";
+  public $model = null;
 
   /**
    * The name of the model attribute to filter.

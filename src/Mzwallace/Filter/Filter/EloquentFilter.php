@@ -85,7 +85,7 @@ class EloquentFilter extends AbstractFilter
   public function processOptions()
   {
     $model = $this->model;
-    $this->instance = new $model;
+    $this->instance = is_object($model) ? $model : new $model;
     $instance = $this->instance;
     $options = $instance->distinct()->lists($this->attribute);
 

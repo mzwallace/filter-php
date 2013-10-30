@@ -1,11 +1,14 @@
 <?php namespace Mzwallace\Filter\Filter;
 
+use Illuminate\Support\Contracts\JsonableInterface;
+use Illuminate\Support\Contracts\ArrayableInterface;
+
 /**
  * EloquentFilter class.
  *
  * @extends Filter
  */
-class EloquentFilter extends AbstractFilter
+class EloquentFilter extends AbstractFilter implements JsonableInterface, ArrayableInterface
 {
   /**
    * The model instance
@@ -122,5 +125,10 @@ class EloquentFilter extends AbstractFilter
       'name'    => $this->name,
       'options' => $this->options
     ];
+  }
+
+  public function toJson()
+  {
+    return json_encode($this->toArray());
   }
 }

@@ -21,6 +21,8 @@ use Illuminate\Database\Eloquent\Model as Eloquent;*/
 
 // USAGE: $instance->distinct()->lists($this->attribute);
 
+use Illuminate\Support\Collection;
+
 class Product
 {
 
@@ -32,6 +34,24 @@ class Product
   public function lists($column)
   {
     return ['Jane', 'Baby Jane', 'Bea'];
+  }
+
+  public function get($columns = [])
+  {
+    return Collection::make([
+      [
+        $columns[0] => 1,
+        $columns[1] => 'Jane'
+      ],
+      [
+        $columns[0] => 2,
+        $columns[1] => 'Baby Jane'
+      ],
+      [
+        $columns[0] => 3,
+        $columns[1] => 'Bea'
+      ]
+    ]);
   }
 
 }

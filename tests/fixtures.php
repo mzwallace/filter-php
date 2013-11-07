@@ -20,7 +20,16 @@ $fixtures = [
     new ArrayInput([
       1 => ['Black', 'Yellow'],
       2 => ['Pink', 'Magenta'],
-      3 => ['Jane', 'Baby Jane']
+      3 => [
+        [
+          'id' => 1,
+          'shape' => 'Jane'
+        ],
+        [
+          'id' => 2,
+          'shape' => 'Baby Jane'
+        ]
+      ]
     ]),
 
     new FilterRepository([
@@ -30,6 +39,7 @@ $fixtures = [
         'model'     => 'Product',
         'attribute' => 'shape',
         'ignore'    => ['Baby Jane']
+        //'only'    => ['Baby Jane']
       ])
     ]),
 

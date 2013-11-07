@@ -79,6 +79,19 @@ class EloquentFilter extends AbstractFilter implements JsonableInterface, Arraya
   }
 
 
+  public function hasOption($input)
+  {
+    foreach ($this->options as $option)
+    {
+      if ($option[$this->attribute] == $input[$this->attribute])
+      {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
   /**
    * retrieveOptions function.
    *
@@ -90,31 +103,28 @@ class EloquentFilter extends AbstractFilter implements JsonableInterface, Arraya
     $model = $this->model;
     $this->instance = is_object($model) ? $model : new $model;
     $instance = $this->instance;
-    $options = $instance->distinct()->lists($this->attribute);
+    $options = $instance->distinct()
+                        ->get(['id', $this->attribute]);
+
+    $attribute = $this->attribute;
 
     if (is_array($this->only) and count($this->only))
     {
-      foreach ($options as $key => $option)
+      $options = $options->filter(function($option) use ($attribute)
       {
-        if ( ! in_array($option, $this->only))
-        {
-          unset($options[$key]);
-        }
-      }
+        return in_array($option[$attribute], $this->only);
+      });
     }
 
     if (is_array($this->ignore) and count($this->ignore))
     {
-      foreach ($this->ignore as $ignored_option)
+      $options = $options->filter(function($option) use ($attribute)
       {
-        if (($key = array_search($ignored_option, $options)) !== false)
-        {
-          unset($options[$key]);
-        }
-      }
+        return !in_array($option[$attribute], $this->ignore);
+      });
     }
 
-    $this->options = array_values($options);
+    $this->options = $options->values()->toArray();
   }
 
   public function toArray()
